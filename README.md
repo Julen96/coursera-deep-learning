@@ -10,6 +10,7 @@ Instructor: Andrew Ng
  ## TODO
 
 ## Course 1: Neural Networks and Deep Learning
+
 - Week1: Introduction to deep learning
 
 - Week2: [Neural Networks Basics](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%202%20Neural%20Networks%20Basics)
@@ -19,26 +20,34 @@ Instructor: Andrew Ng
 - Week4: [Deep Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%204%20Deep%20Neural%20Networks)
 
 ## Course 2: Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization
-Week1 - Practical aspects of Deep Learning - Setting up your Machine Learning Application - Regularizing your neural network - Setting up your optimization problem
-Week2 - Optimization algorithms
-Week3 - Hyperparameter tuning, Batch Normalization and Programming Frameworks
+
+- Week1: [Practical aspects of Deep Learning](https://github.com/Julen96/coursera-deep-learning/tree/master/Improving_Deep_Neural_Networks/Week%201%20Practical%20aspects%20of%20Deep%20Learning)
+
+- Week2: [Optimization algorithms](https://github.com/Julen96/coursera-deep-learning/tree/master/Improving_Deep_Neural_Networks/Week%202%20Optimization%20algorithms)
+
+- Week3: [Hyperparameter tuning, Batch Normalization and Programming Frameworks](https://github.com/Julen96/coursera-deep-learning/tree/master/Improving_Deep_Neural_Networks/Week%203%20Hyperparameter%20tuning%20and%20Tensowrflow)
 
 ## Course 3: Structuring Machine Learning Projects (Still working on it)
-Week1 - Introduction to ML Strategy - Setting up your goal - Comparing to human-level performance
-Week2 - ML Strategy (2) - Error Analysis - Mismatched training and dev/test set - Learning from multiple tasks - End-to-end deep learning
+
+- Week1: Introduction to ML Strategy 
+
+- Week2: ML Strategy (2) 
 
 ## Course 4: Convolutional Neural Networks
-Week1 - Foundations of Convolutional Neural Networks
-Week2 - Deep convolutional models: case studies - Papers for read: ImageNet Classification with Deep Convolutional Neural Networks, Very Deep Convolutional Networks For Large-Scale Image Recognition
-Week3 - Object detection - Papers for read: You Only Look Once: Unified, Real-Time Object Detection, YOLO
-Week4 - Special applications: Face recognition & Neural style transfer - Papers for read: DeepFace, FaceNet
+
+- Week1 - [Foundations of Convolutional Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Convolutional_Neural_Networks/Week%201%20Foundations)
+
+- Week2 - [Keras and Resnets](https://github.com/Julen96/coursera-deep-learning/tree/master/Convolutional_Neural_Networks/Week%202%20Keras%20and%20Resnets)
+
+- Week3 - [Object detection - Car detection with Yolo](https://github.com/Julen96/coursera-deep-learning/tree/master/Convolutional_Neural_Networks/Week%203%20car%20detection%20YOLO)
+
+- Week4 - [Special applications: Face recognition & Neural style transfer](https://github.com/Julen96/coursera-deep-learning/tree/master/Convolutional_Neural_Networks/Week%204%20Face%20Recognition%20and%20Neural%20Style%20Transfer)
 
 ## Course 5: Sequence Models (still working on it)
-Week1 - Recurrent Neural Networks
-Week2 - Natural Language Processing & Word Embeddings
-Week3 - Sequence models & Attention mechanism
 
+- Week1: Recurrent Neural Networks
 
+- Week2: Natural Language Processing & Word Embeddings
 
-
+- Week3: Sequence models & Attention mechanism
 
