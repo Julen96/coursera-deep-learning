@@ -29,9 +29,9 @@ Instructor: Andrew Ng
 
 ## Course 3: Structuring Machine Learning Projects (Still working on it)
 
-- Week1: Introduction to ML Strategy 
+- Week1: Introduction to ML Strategy (TODO)
 
-- Week2: ML Strategy (2) 
+- Week2: ML Strategy (2) (TODO)
 
 ## Course 4: Convolutional Neural Networks
 
@@ -45,9 +45,9 @@ Instructor: Andrew Ng
 
 ## Course 5: Sequence Models (still working on it)
 
-- Week1: Recurrent Neural Networks
+- Week1: [Recurrent Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%205%20-%20Sequence_Models/Week%201%20Recurrent%20Neural%20Networks)
 
-- Week2: Natural Language Processing & Word Embeddings
+- Week2: Natural Language Processing & Word Embeddings (TODO)
 
-- Week3: Sequence models & Attention mechanism
+- Week3: Sequence models & Attention mechanism (TODO)
 
