@@ -9,7 +9,7 @@ Instructor: Andrew Ng
  ## TODO
 
 ## Course 1: Neural Networks and Deep Learning
-Week1 - Introduction to deep learning
+Week1 - [Introduction to deep learning](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%202%20Neural%20Networks%20Basics)
 Week2 - Neural Networks Basics
 Week3 - Shallow neural networks
 Week4 - Deep Neural Networks
