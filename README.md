@@ -10,7 +10,7 @@ Instructor: [Andrew Ng](https://www.andrewng.org/)
 
 - Week1: Introduction to deep learning
 
-- Week2: [Neural Networks Basics](../Course 1 - Neural_Networks_and_Deep_Learning/Week 2 Neural Networks Basics)
+- Week2: [Neural Networks Basics](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%201%20-%20Neural_Networks_and_Deep_Learning/Week%202%20Neural%20Networks%20Basics)
 
 - Week3: [Shallow neural networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%203%20Shallow%20Neural%20Networks)
 
