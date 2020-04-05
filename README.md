@@ -12,9 +12,9 @@ Instructor: [Andrew Ng](https://www.andrewng.org/)
 
 - Week2: [Neural Networks Basics](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%201%20-%20Neural_Networks_and_Deep_Learning/Week%202%20Neural%20Networks%20Basics)
 
-- Week3: [Shallow neural networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%203%20Shallow%20Neural%20Networks)
+- Week3: [Shallow neural networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%201%20-%20Neural_Networks_and_Deep_Learning/Week%203%20Shallow%20Neural%20Networks)
 
-- Week4: [Deep Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Neural_Networks_and_Deep_Learning/Week%204%20Deep%20Neural%20Networks)
+- Week4: [Deep Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%201%20-%20Neural_Networks_and_Deep_Learning/Week%204%20Deep%20Neural%20Networks)
 
 ## Course 2: Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization
 
@@ -44,7 +44,7 @@ Instructor: [Andrew Ng](https://www.andrewng.org/)
 
 - Week1: [Recurrent Neural Networks](https://github.com/Julen96/coursera-deep-learning/tree/master/Course%205%20-%20Sequence_Models/Week%201%20Recurrent%20Neural%20Networks)
 
-- Week2: Natural Language Processing & Word Embeddings (TODO)
+- Week2: Natural Language Processing & Word Embeddings (https://github.com/Julen96/coursera-deep-learning/tree/master/Course%205%20-%20Sequence_Models/Week%202%20Natural%20Language%20Processing%20%26%20Word%20Embeddings)
 
 - Week3: Sequence models & Attention mechanism (TODO)
 
