@@ -1,0 +1,87 @@
+
+
+
+Word Embedding definition: Word embedding is the collective name for a set of language modeling and
+			   feature learning techniques in natural language processing where words or
+  			   phrases from the vocabulary are mapped to vectors of real numbers.
+
+Usage: In our case, we want to represent the words as vectors (instead of one-hot encoding), because
+       those vectors will represent different features, and the more simmilar the vectors, the more 
+       simmilar those words would be.
+
+The word embedding can be trained (how to vectorize each word) from a large corpus in the internet and
+then apply it to our texts
+
+Encoding = Embedding
+
+------------ Properties of Word Embedding ------------
+
+In order to find the similitude between two paired words (man-woman , king-?), we would have to 
+compute the vector from man to woman and find a word that makes the simmilar vector from king
+to the specified word. 
+
+How to compute similarity: Cosine simmilarity / euclidean distance (meassure of dissimilarity)
+
+------------ Embedding Matrix ------------
+
+The Embedding Matrix contains the features of all the words in the vocabulary. In order to obtain
+the features of one word, we just have to multiply the Embedding Matrix with the one-hot encoding
+of that word. Not efficient, in parctice, use specialized function to look up an embedding.
+
+------------ Learning Word Embeddings ------------
+
+In order to predict the next word: We take the previous x words' features, stack them together 
+and feed them to a neural network (previously trained) whose output is a softmax with the vocabulary
+size. Finally the word with largest probability is chosen.
+Each word is represented by its feature vector, therefore words with simmilar vector will count the same.
+
+------------ Word2Vec ------------
+
+Skip Gram model: In order to obtain the probability of one word given another word, we have to build and 
+train a model (softmax layer whose imput is the features of the given word).
+Problem: Computational speed because of the sum of the exponential of all the words in the vocabulary
+Solution: Hierarchical softmax classifier (tree structure, log|v| cost)
+How to sample context: the context words used for training should not take into account the most common words 
+such as (and, or, the...), and should give more weight to more uncommon words.
+
+
+------------ Negative Sampling ------------ 
+
+We pick context words and target word as positive, and then for "k" times pick random words from the dictionary
+and label those targets as 0 (incorrect).
+In this case, instead of having an overall network with 10,000 softmax units (where training each unit needs the 
+output of all the units), we will have 10,000 independent binary classifications, and for each binary classification
+we will take 1 positive and k negative random samples.
+
+------------ GloVe word vectors ------------ 
+
+Global Vectors for Word Representation -> Very simple algorithm
+Xij := number of times "j" appears in context of "i"
+Xij = Xji
+You cannot guarantee that the individual components of the embeddings are interpretable
+
+
+------------ Sentiment Classification ------------ 
+
+simple: outputs the feature vector of each word (feature matrix trained from large corpus), does the average and
+goes to softmax for 1-5 stars
+RNN: feed embedding vectors to a Recurrent Neural Network
+
+
+------------ Debiasing Word Embeddings ------------ 
+
+1.- Identify bias direction: take the difference between two feature vectors that identify the direction (dor example
+he - she to get gender feature). Do it over multiple examples and average to get the direction
+2.- Neutralize: For every word that is not definitional, project into non-bias direction to get rid of bias
+3.- Equalization: Equal the distance from he-she to babysitter
+-> A classifier can be trained to get which words do not have the gender in their own.
+
+
+
+
+
+
+
+
+
+
