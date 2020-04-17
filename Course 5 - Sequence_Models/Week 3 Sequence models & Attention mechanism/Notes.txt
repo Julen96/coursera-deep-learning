@@ -1,0 +1,90 @@
+---------------- Basic Models ----------------
+
+Caption to sequence: Process the image through a CNN and in the final layer (Dense)
+		     we will have the feature information. Feed this to a LSTM
+
+
+---------------- Picking the most likely sequence ----------------
+
+
+Language model: Predicts the probability of a sequence
+Machine translation: Encoding + Decoding
+	- Decoding part is the same as Language model
+	- Encoding: Figures out some representation for the input sequence
+
+Machine translation ~~ Conditional language model
+
+
+---------------- Beam Search ---------------- 
+
+
+The Bean Search algorithm looks for the B most probable paths, whereas the greedy
+search only takes the most probable path. B = 1 -> Greedy search
+
+Steps: First take the B most probable words. Then calculate the total probability of the two
+first words, and take the B combinations that maximize the probability.
+
+
+---------------- Refinements to Beam Search ----------------
+
+Instead of calculating the phrase probability by multiplying the probability of each 
+word (which leads to very small numbers), we will calculate it by summing
+the log probability of each word.
+
+Length Normalization: As the log probabilities are less than 1, the network will preffer
+shorter phrases. Therefore, the log probability can be normalize by dividing by the
+length of the phrase to the power of alpha.
+
+
+---------------- Error analysis in Beam Search ----------------
+
+Dependign on the probability of the predicted output in comparisson with the probability of 
+the real output, we can conclude which is at fault, the Bean Search or the RNN.
+
+
+---------------- Bleu Score ----------------
+
+In order to score the Machine Translation output, we compare it with real References of
+the translation (Made by professional translators).
+
+In order to do the comparisson, we take n-grams from the MT output and the references, and
+see which percentage of them matches.
+
+---------------- Attention Model Intuition ----------------
+
+Long sentences (>20 words) usually have a worst Bleu Score, because the model memorizes the
+whole sentence and then tries to translate it, when a human would brake it into parts and
+translate it.
+
+Therefore, in order to generate the words of the translation, we will weight the words of
+the original language and feed them in order to calculate each word in the translation. 
+This means each translated word will have an special focus on some input words.
+
+---------------- Attention Model ----------------
+
+For the Encoding part (input sentence to representation) a Bidirectional RNN will be used.
+For the Decoding part (representation to output sentence) a Forward RNN will be used.
+Each cell in the Decoding part will have as input a weighted sum of the activations of the 
+Encoding Bidirectional RNN (named context vectors)
+
+Computing attention: The amount of attention a Yt cell input should pay to At' is defined by the
+previous cell and At'. To know the relation, a small neural network is used, and then
+this attention is normalized with a softmax function.
+
+---------------- Speech Recognition ----------------
+
+The model used for speech recognition is usually a bidirectional RNN. Here, even if the input
+audio is 10 seconds large, depending on the frequency of the speech, we can have much
+larger input, up to 1,000 times larger. Even if the input is this large, the output usually
+is much smaller, therefore, a basic rule is used to convert the large output into a small 
+one: Collapse repeated characters not separated by "blank" character.
+
+---------------- Trigger Word Detection ----------------
+
+For a Trigger Word Detection (such as Alexa for the amazon device), we can just set an 
+output of 1 in the RNN if the target word is detected
+
+
+
+
+
