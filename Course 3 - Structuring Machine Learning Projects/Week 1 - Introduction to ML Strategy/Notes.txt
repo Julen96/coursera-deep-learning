@@ -1,0 +1,66 @@
+--------------- Orthogonalization ---------------
+
+We want the variables' vectors to be as orthogonal as possible, in order to be one
+independent of each other, and easier to tune the knobs.
+
+
+Chain of assumptions in ML:
+In order to make a ML algorithm that performs well in real world application, several steps
+have to be taken, and if there are errors in them (or don't perform too well) we can perform
+some changes.
+
+- Fit training set well on cost function -> more or less equal to human-label performance
+						- Bigger Network
+						- Hyperparameter tuning: Optimizer, ...
+- Fit dev set well on cost function -> - Regularization, Bigger training set
+- Fit test set well on cost function -> Bigger dev set
+- Performs well in real world -> Change dev set or cost function
+
+
+--------------- Single number evaluation metric ---------------
+
+In the early start of a project, a single evaluation metric should be used to know the
+performance of the model, and choose between clasifiers.
+
+
+--------------- Satisficing and Optimizing metric ---------------
+
+Optimizing: Accuracy for example -> Optimize this metric
+Satisficing: Running time for example -> Just check that it is in the specified threshold
+N metrics: 1 Optimizing, N-1 satisficing.
+
+
+--------------- Train/dev/test distributions ---------------
+
+Dev set and Test set should have similar distribution
+Randomly shuffle the data into Dev and Test set
+
+Guideline: Choose a dev set and test set (same distribution) to reflect data you expect 
+	   to get in the future and consider important to do well on
+
+
+--------------- Size of the dev and test sets ---------------
+
+Sizes of dev and test sets can vary depending on the problem and the amount of data we have.
+Specially with large datasets, we use more data for training and less for dev and tests sets
+
+Size of test: Set your test set to be big enough to give high confidence in the overall
+	      performance of yout system
+
+
+--------------- When to change dev/test sets and metrics ---------------
+
+If we are unsatisfied with our actual error metric and think we should take other parameters
+into account, we can slightly change the error metric by adding a weighting factor.
+
+If doing well on your metric + dev/test set does not correspond to doing well on your
+application, change your metric and/or dev/test set.
+
+
+
+
+
+
+
+
+
