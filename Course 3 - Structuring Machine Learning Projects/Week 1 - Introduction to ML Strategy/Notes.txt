@@ -57,10 +57,47 @@ If doing well on your metric + dev/test set does not correspond to doing well on
 application, change your metric and/or dev/test set.
 
 
+--------------- Why human-level performance? ---------------
+
+When a model predicts better than humans, then it usually has low gap for imrpovement, but 
+it is usually not that hard to make a model predict as well as humans. The model usually 
+improves fast before reaching the human-level performance, and then improves much slower,
+till reaching an artificial limit called Bayes error.
 
 
+--------------- Avoidable bias ---------------
+
+If there is still room for improvement in our Training error, we should focus on bias, and
+if there is not so much room for improvement, we should focus on variance, in order to
+make the dev error similar to the training error.
+
+Avoidable bias: difference between the training error and the Bayes error
 
 
+--------------- Understanding human-level performance ---------------
+
+Human-level performance is usually taken as the best performance the most experienced human
+can get. Therefore the error get this way is usually close to the Bayes error.
 
 
+--------------- Surpassing human-level performance ---------------
+
+Usually avoidable bias is defined as the difference between the training error and the human
+error. But if the model behaves better than humans, it is hard to tell which is the room for
+improvement.
+
+
+--------------- Improving your model performance ---------------
+
+Two fundamental assumptions of supervised learning:
+- You can fit the training set pretty well. (Avoidable bias)
+- The training set performance generalizes pretty well to the dev/test set. (Variance)
+
+Reducing (avoidable) bias and variance:
+- Avoidable bias: 	- Train bigger model
+			- Train longer/better optimization algorithms
+			- NN architecture / hyperparameters search
+- Variance:	- More data
+		- Regularization (L2, dropout, data augmentation)
+		- NN architecture / hyperparameters search
 
