@@ -1,0 +1,100 @@
+
+-------------------- Carrying out error analysis --------------------
+
+The first approach should be to look at the dev examples to evaluate ideas. Look at the
+examples that have been mislabeled in order to know where is the problem.
+
+Multiple ideas can be evaluated in parallel, making an excel with the different problems
+and their ocurring percentage.
+
+
+-------------------- Cleaning up incorrectly labeled data --------------------
+
+Deep Learning algorithms are quite robust to random errors in the training set, but have 
+problems with the systematic errors (identify white small dogs as cats).
+
+Approach: Do random analysis with a new column for incorrectly labeled data.
+
+Correcting incorrect dev/test set examples: - Apply same process to your dev and test sets to
+					      make sure they continue to come from same distrib.
+					    - Consider examining examples your algorithm got
+					      right as well as ones it got wrong.
+
+
+-------------------- Build your first system quickly, then iterate --------------------
+
+First: Set up dev/test set and metric
+- Build initial system quickly
+- Use Bias/Variance analysis and Error analysis to prioritize next steps.
+
+
+-------------------- Training and testing on different distributions --------------------
+
+Dev and test set must have same distribution, even if they are different from the training 
+set distribution. We can feed data from a different distribution to train the model in 
+order to have more data, but the test and dev set have to aim for the real-application target.
+
+
+-------------------- Bias and Variance with mismatched data distributions --------------------
+
+If we have a Dev set with different ditribution, and it gets much larger error than the 
+training set, we cannot know if it is because of the variance or because the images
+in the Dev set are much harder. In order to solve this, we will define a new training-dev
+set and see the performance there.
+
+training - training-dev --> Low gap: Data mismatch problem
+training - training-dev -> High gap: Variance problem
+
+When the data is mismatched and come from different distributions, usually one of the
+distributions is easier, and so we get a better performance on it.
+
+
+-------------------- Addressing data mismatch --------------------
+
+-> Carry out manual error analysis to try to understand difference between training
+   and dev/test sets
+
+-> Make training data more similar; or collect more data similar to dev/test sets
+
+We have to be careful with the Artificial data synthesis. We have to generalize well,
+and therefore we cannot take 20 different cars and modify them, when in reality there
+are much more. 
+
+
+-------------------- Multi-task learning --------------------
+
+-> Building a Neural Network that is looking at an image and solving multiple problems.
+For example extracting from an image if there is any car, pedestrian or stop sign.
+
+Makes sense when:
+-> Training on a set of tasks that could benefit from having shared lower-level features.
+-> Usually: Amount of data you have for each task is quite similar.
+-> Can train big enough neural network to do well on all the tasks.
+
+
+-------------------- What is end-to-end deep learning? --------------------
+
+Usual Machine Learning approaches have some kind of preprocessing and post-processing of
+the data in order to achieve the goal, but end-to-end Deep Learning relies on the ML
+algorithm in order to do this pre and post processing
+
+We need a lot of data in order to build end-to-end Deep Learning. For example, in Face
+Recognition problems, we divide the problem in two sub-problems: Face detection and 
+Face recognition.
+
+
+-------------------- Whether to use end-to-end deep learning --------------------
+
+Pros:
+- Let the data speak
+- Less hand-designing of components needed
+
+Cons:
+- May need large amount of data
+- Excludes potentially useful hand-designed components
+
+Key question: Do you have sufficient data to learn a function of the complexity needed
+	      to map x to y?
+
+
+
